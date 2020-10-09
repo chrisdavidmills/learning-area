@@ -8,7 +8,12 @@
     <script>
       async function myFetch() {
         let response = await fetch('coffee.jpg');
-        return await response.blob();
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+          return await response.blob();
+        }
       }
 
       myFetch().then((blob) => {

@@ -26,6 +26,10 @@
 
   </body>
   <script>
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
     let motherInfo = 'The mother cats are called ';
     let kittenInfo;
 
@@ -39,16 +43,31 @@
 
       // Add your code here
 
+      let cats = JSON.parse(catString);
+
+  for(let i = 0; i < cats.length; i++) {
+    for(let j = 0; j < cats[i].kittens.length; j++) {
+      total++;
+      if(cats[i].kittens[j].gender === 'm') {
+        male++;
+      }
+    }
+
+    if(i < (cats.length - 1)) {
+      motherInfo += `${ cats[i].name }, `;
+    } else {
+      motherInfo += `and ${ cats[i].name }.`;
+    }
+  }
+
+  kittenInfo  = `There are ${ total } kittens in total, ${ male } males and ${ total - male } females.`;
+
     // Don't edit the code below here!
 
       para1.textContent = motherInfo;
       para2.textContent = kittenInfo;
     }
 
-    const section = document.querySelector('section');
-
-    let para1 = document.createElement('p');
-    let para2 = document.createElement('p');
     section.appendChild(para1);
     section.appendChild(para2);
   </script>

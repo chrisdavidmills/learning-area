@@ -40,13 +40,12 @@
       }
 
       input[type="text"], textarea {
-        box-shadow: inset 1px 1px 3px #ccc;
-        border-radius: 5px;
         width: 50%
       }
 
       textarea {
-        height: 100px;
+        height: 110px;
+        resize: none;
       }
 
       label {
@@ -62,18 +61,17 @@
         margin: 20px auto;
       }
 
-      input:-moz-read-only, textarea:-moz-read-only {
-        border: 0;
-        box-shadow: none;
-        resize: none;
-        background-color: white;
-      }
-
+      input:-moz-read-only, textarea:-moz-read-only,
       input:read-only, textarea:read-only {
         border: 0;
         box-shadow: none;
-        resize: none;
         background-color: white;
+      }
+
+      textarea:-moz-read-write,
+      textarea:read-write {
+        box-shadow: inset 1px 1px 3px #ccc;
+        border-radius: 5px;
       }
     </style>
 </head>
@@ -81,7 +79,7 @@
 <body>
     <form>
       <fieldset>
-        <legend>Check shipping details</legend>
+        <legend contenteditable="true">Check shipping details</legend>
         <div>
           <label for="name">Name: </label>
           <input id="name" name="name" type="text"
@@ -90,7 +88,10 @@
         <div>
           <label for="address">Address: </label>
           <textarea id="address" name="address" readonly>
-23 Elastic Way, Viscous, Bright Ridge, CA, USA
+23 Elastic Way,
+Viscous,
+Bright Ridge,
+CA
 </textarea>
         </div>
         <div>

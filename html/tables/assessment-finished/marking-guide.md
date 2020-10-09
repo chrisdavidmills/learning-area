@@ -37,8 +37,8 @@ The overall mark awarded is out of 34. Work out their final mark, and then divid
     The student needs to add the <code>scope</code> value to all the <code>&lt;th&gt;</code> elements, giving them appropriate values as shown below:
     <ul>
       <li><code>col</code>: All the <code>&lt;th&gt;</code> elements in the table header row.</li>
-      <li><code>row</code>: All the <code>&lt;th&gt;</code> elements containing planet names</li>
-      <li><code>rowgroup</code>: The <code>&lt;th&gt;</code> elements containing "Terrestial planets", "Jovian planets", "Gas giants", "Ice giants", and "Dwarf planets".</li>
+      <li><code>row</code>: All the <code>&lt;th&gt;</code> elements containing planet names, and the one containing "Dwarf planets" (it is also a heading over only one row).</li>
+      <li><code>rowgroup</code>: The <code>&lt;th&gt;</code> elements containing "Terrestial planets", "Jovian planets", "Gas giants", and "Ice giants".</li>
     </ul>
   </dd>
   <dt>Add a black border just around the column that contains all the planet name row headers (4 marks).</dt>

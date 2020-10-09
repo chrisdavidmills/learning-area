@@ -60,7 +60,7 @@ let fixedQuote = quote.toLowerCase();
 let firstLetter = fixedQuote.slice(0,1);
 fixedQuote = fixedQuote.replace(firstLetter, firstLetter.toUpperCase());
 
-fixedQuote.replace('green eggs and ham', 'pickled onions');
+fixedQuote = fixedQuote.replace('green eggs and ham', 'pickled onions');
 
 let fullStop = '.';
 let finalQuote = fixedQuote + fullStop;

@@ -202,15 +202,21 @@
         document.addEventListener('keydown', keyHandler);
 
         function keyHandler(e) {
+          let isOver = false;
           console.log(e.key);
-          if(e.key === "a") {
+          
+          if (e.key === "a") {
             result.textContent = 'Player 1 won!!';
-          } else if(e.key === "l") {
+            isOver = true;
+          } else if (e.key === "l") {
             result.textContent = 'Player 2 won!!';
+            isOver = true;
           }
 
-          document.removeEventListener('keydown', keyHandler);
-          setTimeout(reset, 5000);
+          if (isOver) {
+            document.removeEventListener('keydown', keyHandler);
+            setTimeout(reset, 5000);
+          }
         };
       }
     </script>

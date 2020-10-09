@@ -24,6 +24,10 @@
     </section>
 
     <textarea class="playable playable-js" style="height: 220px;">
+const section = document.querySelector('section');
+
+let para1 = document.createElement('p');
+let para2 = document.createElement('p');
 
 let motherInfo = 'The mother cats are called ';
 let kittenInfo;
@@ -46,8 +50,6 @@ function displayCatInfo(catString) {
   para2.textContent = kittenInfo;
 }
 
-let para1 = document.createElement('p');
-let para2 = document.createElement('p');
 section.appendChild(para1);
 section.appendChild(para2);
     </textarea>

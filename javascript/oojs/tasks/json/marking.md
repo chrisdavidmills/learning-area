@@ -23,6 +23,10 @@ Some hints/questions:
 Your code should look something like this:
 
 ```
+let section = document.querySelector('.preview');
+let para1 = document.createElement('p');
+let para2 = document.createElement('p');
+
 let motherInfo = 'The mother cats are called ';
 let kittenInfo;
 

@@ -74,30 +74,15 @@ Finally, you'll need to use a loop to go through the numbers 1 to 500, backwards
 
 You should use a type of loop that you've not used in the previous two tasks.
 
-The code should look like this:
+The code should look something like this:
 
 ```
-let i = 500;
-let para = document.createElement('p');
-
-function isPrime(num) {
-  for(let i = 2; i < num; i++) {
-    if(num % i === 0) {
-      return false;
-    }
+do {
+  if (isPrime(i)) {
+    para.textContent += `${i} `;
   }
-  
-  return true;
-}
-
-while(i >= 0) {
- i--;
- if(!isPrime(i)) {
-   continue;
- }
- 
- para.textContent += `${i} `;
-}
-
-section.appendChild(para);
+  i--;
+} while (i > 1);
 ```
+
+(Answer provided by harryghgim; well done!)

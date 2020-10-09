@@ -76,7 +76,6 @@ function toggleMusician(bool) {
     instruItem.input.disabled = true;
     instruItem.label.style.color = '#999';
     instruItem.input.setAttribute('aria-disabled', 'true');
-    instruItem.input.removeAttribute('aria-label');
     hiddenAlert.textContent = 'Instruments played field now disabled.';
   }
 }

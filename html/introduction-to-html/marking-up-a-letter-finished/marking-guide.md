@@ -59,7 +59,7 @@ The overall mark awarded is out of 45.5. Work out their final mark, and then div
   The two places should have an &lt;a&gt; element wrapped around reasonable words to make the link. Each element should have an href attribute pointing to a dummy URL, such as "http://www.example.com" or "*", and a title attribute that describes what the link should point to. Half a mark should be taken off if the link text is inappropriate, and/or attributes are missing.
   <ul>
     <li>First instance: something like &lt;a href="http://www.example.com" title="table of awesome university important dates"&gt;important university dates&lt;/a&gt;</li>
-    <li>Second instance: something like &lt;a href="htp://www.example.com" title="Dr Gaye's exotic dance research"&gt;exotic dance research page&lt;/a&gt;</li>
+    <li>Second instance: something like &lt;a href="http://www.example.com" title="Dr Gaye's exotic dance research"&gt;exotic dance research page&lt;/a&gt;</li>
   </ul>
 </dd>
 <dt>The university motto quote and citation should be marked up with appropriate elements (2 marks)</dt>

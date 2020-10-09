@@ -97,7 +97,11 @@
       }
 
       Teacher.prototype = Object.create(Person.prototype);
-      Teacher.prototype.constructor = Teacher;
+      Object.defineProperty(Teacher.prototype, 'constructor', { 
+         value: Teacher, 
+         enumerable: false, // so that it does not appear in 'for in' loop
+         writable: true 
+      });
 
       Teacher.prototype.greeting = function() {
         let prefix;

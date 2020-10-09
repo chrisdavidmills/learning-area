@@ -14,13 +14,17 @@
         let content;
 
         // Depending on what type of file is being fetched, use the relevant function to decode its contents
-        if(type === 'blob') {
-          content = await response.blob();
-        } else if(type === 'text') {
-          content = await response.text();
-        }
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+          if(type === 'blob') {
+            content = await response.blob();
+          } else if(type === 'text') {
+            content = await response.text();
+          }
 
-        return content;
+          return content;
+        }
       }
 
       async function displayContent() {

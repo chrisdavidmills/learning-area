@@ -54,7 +54,7 @@ playBtn.addEventListener('click', function() {
 // if track ends
 audioElement.addEventListener('ended', function() {
 	playBtn.setAttribute('class', 'paused');
-	this.textContent = 'Play'
+	playBtn.textContent = 'Play'
 });
 
 // volume
